@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Image gallery with  modal and page</title>
+      <link rel="stylesheet" href="/css/style.css" />
+      <link rel="shortcut icon" href="#">
+
+   </head>
+   <body>
+      <header class="island">
+         <h1>Image gallery with modal and page</h1>
+        
+      </header>
+
+      <div class="island island__modal hidden">
+         <div class="js-gallery gallery">
+            <span class="gallery__close">X</span>
+            <img src="" class="js-gallery__image" />
+         </div>
+      </div>
+
+      <div class="island thumbnails">
+         <ul class="js-thumbnails__list thumbnails__list"></ul>
+         <ol class="js-thumbnails__pager thumbnails__pager"></ol>
+      </div>
+
+
+      <script src="js/utility.js"></script>
+      <script src="js/gallery.js"></script>
+      <script src="js/flickr.js"></script>
+      <script src="js/main.js"></script>
+   </body>
+</html>
