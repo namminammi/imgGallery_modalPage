@@ -1,0 +1,162 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Calibri, Helvetica, sans-serif;
+}
+
+h1 {
+    display: block;
+    color: #000;
+    padding-left: 1rem;
+}
+
+.content {
+    padding: 1rem;
+}
+
+.island {
+    display: block;
+    margin: 0 auto;
+
+    &__modal {
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        min-width: 100%;
+        min-height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    color: red;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.gallery {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+        display: block;
+        max-width: 77%;
+        width: 100%;
+        padding: 10%;
+
+    }
+
+    &__close {
+        color: #fff;
+        font-size: 30px;
+        border: 3px solid #fff;
+        padding: 5px 10px;
+        position: absolute;
+        right: -25px;
+        top: 0;
+    }
+}
+
+
+.thumbnails {
+    border-bottom: 3px solid #FFFFFF;
+    margin-right: -8px;
+
+    &__list,
+    &__pager {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__list li {
+        display: inline-block;
+        width: 19%;
+        margin-top: 1%;
+        margin-right: 1%;
+    }
+
+    &__pager {
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 1em;
+
+        li {
+            display: inline;
+        }
+
+        a {
+            margin: 0 0.2em;
+            text-decoration: none;
+
+            &.current,
+            &:hover,
+            &:focus {
+                color: #FCB720;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.thumbnail {
+    width: 100%;
+
+    &:hover,
+    &:focus {
+        border: 1px solid #FCB720;
+        opacity: 0.7;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .thumbnails__list li {
+        width: calc(32.3%);
+    }
+
+    .gallery {
+        top: 43%;
+        left: 43%;
+        transform: translate(-43%, -43%);
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .thumbnails__list li {
+        width: 48.6%;
+    }
+}

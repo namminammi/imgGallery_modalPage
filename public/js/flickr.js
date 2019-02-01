@@ -1,6 +1,6 @@
 (function(document, window) {
    'use strict';
-
+   console.log('Testing')
    var apiKey = '9bdeaf5eb2074ec0ba6cd458c24a5e37';
    var apiURL = 'https://api.flickr.com/services/rest/';
 
