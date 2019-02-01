@@ -12,3 +12,7 @@ var server = app.listen(8000, function(){
     var port = server.address().port;
     console.log("Server started at http://localhost:%s", port);
 });
+
+//opens the localhost in Chrome 
+const opn = require('opn')
+opn('http://localhost:8000', {app: ['google chrome']});

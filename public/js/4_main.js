@@ -5,9 +5,6 @@
    var assocImg = 'bonaro'; //images associated with this word
 
    function searchPhotos(text, page) {
-      // if (text.length === 0) {
-      //    alert('Error: the field is required');
-      // }
       page = page > 0 ? page : 1;
 
       Flickr.searchText({
